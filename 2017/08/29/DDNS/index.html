@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | X-Space</title>
+  <title>DDNS | X-Space</title>
   <meta name="author" content="ZhuChaozheng SunTong ChuZhefan">
   
   <meta name="description" content="This website is designed by x-space, and use to offer a professional robot solutions.">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="DDNS"/>
   <meta property="og:site_name" content="X-Space"/>
 
   
@@ -210,25 +210,103 @@ var _hmt = _hmt || [];
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2017</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-29T11:54:42.000Z"><a href="/2017/08/29/DDNS/">2017-08-29</a></time>
+      
+      
+  
+    <h1 class="title">DDNS</h1>
+  
 
+    </header>
+    <div class="entry">
+      
+        <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p><strong>项目所用的服务器是基础电信线路，没有申请固定ip，需要使用ddns实时更新服务器ipv4地址。</strong>  <a id="more"></a></p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><p>&emsp;&emsp;最新版本的花生壳已不再支持动态域名（ddns），仅支持内网穿透。<br>&emsp;&emsp;而花生壳之前发布的软件phddns2.0仍支持ddns，在<a href="http://hsk.oray.com/download/" target="_blank" rel="external">http://hsk.oray.com/download/</a>下载经典版即可。 <br><br>&emsp;&emsp;在ubuntu下，使用dpkg安装<strong><em>(sudo dpkg -i  [软件包名])</em></strong>后，直接运行phddns即可进行交互式配置。服务器配置和网卡配置保持默认即可，花生壳官网的账号就是登陆所需的用户名密码。交互式配置完成后ddns服务就开始运行。<strong><em>务必记住配置文件所在位置，以便之后修改，这个位置可以在先前的交互式配置中设置</em></strong>。服务正常运行后，即可把它加入系统启动项中。<br><br>&emsp;&emsp;在ubuntu下，自订服务脚本需要自定init info，否则会报错。<br><br>&emsp;&emsp;以ubuntu16.04LTS为例，在/etc/init.d中新建一个shell脚本<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi phddns-autorun.sh</div></pre></td></tr></table></figure></p>
+<p>按i进入插入模式，<br>然后录入以下文本，#!/bin/sh以下是init info部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">### BEGIN INIT INFO</div><div class="line"># Provides:          phddns_oray_ddns</div><div class="line"># Required-Start:    $local_fs $network</div><div class="line"># Required-Stop:     $local_fs</div><div class="line"># Default-Start:     2 3 4 5</div><div class="line"># Default-Stop:      0 1 6</div><div class="line"># Short-Description: phddnsd</div><div class="line"># Description:       phddns daemon</div><div class="line">### END INIT INFO</div><div class="line">phddns -d</div><div class="line">exit 0</div></pre></td></tr></table></figure></p>
+<p>phddns -d 以守护程序方式运行，在前面的交互式配置之后，该方式会默认使用先前设置好的配置文件。<br><br>&emsp;&emsp;录入完成后按ESC然后输入:wq!保存缓冲区并退出。然后把该脚本设置为默认情况下的开机启动项。<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo update-rc.d phddns-autorun.sh defaults</div></pre></td></tr></table></figure></p>
+<p><br><br>&emsp;&emsp;设置成功后，为该服务器设置的动态域名可到<a href="https://b.oray.com/" target="_blank" rel="external">花生壳控制台</a>登录查看，默认情况下所有的壳域名均可作为动态域名使用。<br><br>&emsp;&emsp;花生壳官网同时提供了可免费申请的ddns服务SDK，可用于服务器集群的ddns配置。</p>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2017-08-29T11:54:42.000Z"><a href="/2017/08/29/DDNS/">2017-08-29</a></time>
-            
-              <h1 class="title"><a href="/2017/08/29/DDNS/">DDNS</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+      
+    </div>
+    <footer>
+      
+        
+        
+        <div class="bdsharebuttonbox">
+		<a href="#" class="bds_more" data-cmd="more"></a>
+		<a href="#" class="bds_qzone" data-cmd="qzone"></a>
+		<a href="#" class="bds_tsina" data-cmd="tsina"></a>
+		<a href="#" class="bds_tqq" data-cmd="tqq"></a>
+		<a href="#" class="bds_renren" data-cmd="renren">
+		</a><a href="#" class="bds_weixin" data-cmd="weixin"></a>
+		</div>
+<script>
+window._bd_share_config={
+"common":{
+"bdSnsKey":{},
+"bdText":"",
+"bdMini":"2",
+"bdPic":"",
+"bdStyle":"0",
+"bdSize":"16"},
+"share":{},
+"image":{
+"viewList":[
+"qzone","tsina",
+"tqq","renren",
+"weixin"],
+"viewText":"分享到：",
+"viewSize":"16"},
+"selectShare":{
+"bdContainerClass":null,
+"bdSelectMiniList":[
+"qzone","tsina","tqq",
+"renren","weixin"]
+}
+};
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+      
+      <div class="clearfix"></div>
+    </footer>
   </div>
+</article>
+
+
+<!-- 页面导航 -->
+ <nav id="pagination" >
+    
+    
+    <a href="/2016/01/10/Principle-of-real-time-video-transmission/" class="alignright next" >Next</a>
+    
+    <div class="clearfix"></div>
+</nav>
+<section id="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-category="<#article/category/id#>" data-thread-key="<#article/id#>" data-title="<#article/title#>" data-author-key="<#article/author/id#>"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"aichimantou"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
